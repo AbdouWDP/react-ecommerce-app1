@@ -1,0 +1,200 @@
+.products {
+  width: 100vw;
+}
+.products .container {
+  width: 98%;
+  margin: auto;
+  height: 100px;
+}
+.popular-products-menu,
+.daily-best-sells {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  color: var(--blue);
+}
+.popular-products-menu nav ul,
+.daily-best-sells nav ul {
+  display: flex;
+  gap: 16px;
+}
+.popular-products-menu h1,
+.daily-best-sells h1 {
+  font-size: 2em;
+}
+.popular-products-menu nav ul li a,
+.daily-best-sells nav ul li a {
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: capitalize;
+  transform: 200ms ease-in-out;
+  color: var(--blue);
+}
+.popular-products-menu nav ul li a.active,
+.daily-best-sells nav ul li a.active {
+  color: var(--button-color);
+}
+.popular-products-menu nav ul li a:hover,
+.daily-best-sells nav ul li a:hover {
+  color: var(--button-color);
+  transform: translateY(-8px);
+}
+.popular-products-cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.product-card {
+  width: calc(100% / 5 - 20px);
+  aspect-ratio: 1/1.5;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: 200ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-card:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  outline: 1px solid var(--light-green);
+}
+.pc-container {
+  width: 90%;
+  height: 90%;
+}
+.product-card-image {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.product-card-image:hover .product-hover-options {
+  opacity: 1;
+}
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 500ms ease;
+}
+
+.product-card-image img:hover {
+  scale: 1.1;
+}
+.product-card-informations {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.pci-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pci-top .cat {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: var(--small-text);
+}
+.pci-top .title {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--blue);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.pci-top .rating {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+.pci-top .rating span:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ecc065;
+}
+.pci-top .rating span:last-child {
+  color: var(--small-text);
+}
+.pci-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pci-bottom .price {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--button-color);
+}
+.pci-bottom .add-to-cart {
+  padding: 10px 20px;
+  background-color: #def9ec;
+  color: var(--button-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.pci-bottom .add-to-cart span:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+}
+.pci-bottom .add-to-cart:hover {
+  background-color: var(--button-color);
+  color: #fff;
+}
+.product-hover-options {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 35px;
+  background-color: #fff;
+  border: 1px solid var(--button-color);
+  border-radius: 8px;
+  display: flex;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+.product-hover-options button {
+  width: calc(100% / 3);
+  height: 100%;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+  color: var(--button-color);
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
+}
+.product-hover-options .compare {
+  border-left: 1px solid var(--button-color);
+  border-right: 1px solid var(--button-color);
+}
+.product-hover-options button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-hover-options button:hover {
+  color: var(--button-hover-color);
+}

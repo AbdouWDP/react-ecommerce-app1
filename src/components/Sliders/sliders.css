@@ -1,0 +1,159 @@
+/* Display Flex */
+.slider,
+.slide,
+.slide-button,
+.subscribe-input span,
+.slide-button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 100vw;
+}
+.slider .container {
+  width: 98%;
+  height: 90%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-shrink: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.slider .container {
+  position: relative;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f2f3f4;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 9999999;
+  border: none;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  opacity: 0;
+  font-size: 1.5em;
+}
+.next-slide {
+  right: 20px;
+}
+.prev-slide {
+  left: 20px;
+}
+.slide-button:hover {
+  background-color: var(--button-color);
+  color: #fff;
+}
+.slider .container:hover .slide-button {
+  opacity: 1;
+}
+
+.half-slide-container {
+  width: 90%;
+  height: 60%;
+}
+
+.half-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.half-slide h1 {
+  color: var(--blue);
+  font-size: 4.5em;
+  line-height: 1em;
+}
+.half-slide p {
+  color: var(--small-text);
+  font-size: 2em;
+  word-spacing: -4px;
+  font-weight: 600;
+}
+.subscribe-input {
+  width: 40%;
+  height: 4em;
+  background-color: #fff;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-input span {
+  width: 15%;
+  height: 100%;
+  font-size: 1.2em;
+  color: var(--small-text);
+}
+.subscribe-input div {
+  width: 55%;
+  height: 100%;
+}
+.subscribe-input div input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 12px 0 0;
+}
+.subscribe-input button {
+  width: 30%;
+  height: 100%;
+  background-color: var(--button-color);
+  color: #fff;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+.subscribe-input button {
+  background-color: #29a56c;
+}
+.paginations {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 9999;
+}
+.paginations button {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+  background-color: transparent;
+}
+.paginations button:hover {
+  background-color: var(--light-green);
+}
+.paginations button:active,
+.paginations button.active {
+  background-color: var(--button-color);
+  border: none;
+}

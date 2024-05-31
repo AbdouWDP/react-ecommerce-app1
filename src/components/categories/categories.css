@@ -1,0 +1,187 @@
+/* Display Flex */
+
+.category-bottom-card .container button,
+.category-bottom-card,
+.categories-navigation-buttons button span,
+.category-card,
+.category-bottom-card .container span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categories {
+  width: 100vw;
+}
+.categories .container {
+  width: 98%;
+  margin: auto;
+}
+.categories-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--blue);
+}
+.featured-categories {
+  display: flex;
+  gap: 2.5em;
+  align-items: center;
+}
+.categories-menu h1 {
+  font-size: 2em;
+}
+.categories-menu nav ul {
+  display: flex;
+  gap: 16px;
+}
+.categories nav ul li a {
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: capitalize;
+  transform: 200ms ease-in-out;
+}
+.categories nav ul li a:hover {
+  color: var(--button-color);
+  transform: translateY(-8px);
+}
+
+.categories-navigation-buttons {
+  display: flex;
+  gap: 8px;
+}
+.categories-navigation-buttons button {
+  width: 40px;
+  height: 40px;
+  color: var(--small-text);
+  background-color: #f2f3f4;
+  color: #7e7e7e;
+  border: none;
+  border-radius: 50%;
+  font-size: 1em;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+.categories-navigation-buttons button:hover {
+  background-color: var(--button-color);
+  color: #fff;
+}
+.category-cards {
+  width: 100%;
+  display: flex;
+  gap: 24px;
+  overflow: scroll;
+  scrollbar-width: none;
+  padding: 40px 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.category-card {
+  width: 140px;
+  aspect-ratio: 1/1.3;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: 200ms ease-in-out;
+}
+.category-card:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  outline: 1px solid var(--light-green);
+}
+.category-card:hover .category-card-img img {
+  scale: 1.1;
+}
+.category-card:hover .category-card-title {
+  color: var(--button-color);
+}
+.category-card-cont {
+  width: 80%;
+  height: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.category-card-img {
+  width: 100%;
+  height: 60%;
+  cursor: pointer;
+}
+.category-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 200ms ease-in-out;
+}
+.category-card-title {
+  text-transform: capitalize;
+  color: var(--blue);
+  font-size: 1em;
+  transition: 200ms ease-in-out;
+}
+.items-count {
+  color: var(--small-text);
+  font-size: 0.9em;
+}
+.categories-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.category-bottom-card {
+  width: calc(100% / 3 - 24px);
+  aspect-ratio: 16/9;
+  background-color: red;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+.category-bottom-card:first-child {
+  background-image: url("../../assets/banner-1.png");
+}
+
+.category-bottom-card:nth-child(2) {
+  background-image: url("../../assets/banner-2.png");
+}
+.category-bottom-card:last-child {
+  background-image: url("../../assets/banner-3.png");
+}
+.category-bottom-card .container {
+  width: 80%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.category-bottom-card .container h2 {
+  color: var(--blue);
+  width: 70%;
+  transition: 200ms ease-in-out;
+}
+.category-bottom-card .container button {
+  width: 120px;
+  background-color: var(--button-color);
+  color: #fff;
+  font-size: 0.7em;
+  transition: 200ms ease-in-out;
+  gap: 4px;
+  box-shadow: none;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.category-bottom-card .container button:hover {
+  background-color: var(--button-hover-color);
+  box-shadow: none;
+}
+.category-bottom-card .container button span:nth-child(2) {
+  transition: 200ms ease-in-out;
+}
+.category-bottom-card .container button:hover span:nth-child(2) {
+  transform: translateX(6px);
+}
+.category-bottom-card:hover .container h2 {
+  transform: translateY(-8px);
+}
