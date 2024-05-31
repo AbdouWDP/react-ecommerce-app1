@@ -255,6 +255,7 @@ a:link {
 
 .mobile-header-middle {
   width: 100vw;
+  display: none;
 }
 .mobile-header-middle .container {
   width: 98%;
